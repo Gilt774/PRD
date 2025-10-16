@@ -1,0 +1,33 @@
+// Add this inside your site's Footer component or any page section
+
+import { FileText, Download } from "lucide-react";
+
+export default function ProjectDocsLinks() {
+  return (
+    <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center justify-center text-sm text-gray-400 mt-8 border-t border-gray-700 pt-4">
+      <div className="flex items-center gap-1">
+        <FileText size={16} />
+        <a
+          href="/docs/PRD.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-blue-400 transition-colors"
+        >
+          View PRD (Markdown)
+        </a>
+      </div>
+
+      <div className="flex items-center gap-1">
+        <Download size={16} />
+        <a
+          href="/docs/PRD.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-blue-400 transition-colors"
+        >
+          Download PRD (PDF)
+        </a>
+      </div>
+    </div>
+  );
+}
